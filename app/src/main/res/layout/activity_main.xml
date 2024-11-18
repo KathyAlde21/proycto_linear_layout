@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- LINEAR LAYOUT -->
+<!-- edito y cambio androidx.constraintlayout.widget.ConstraintLayout por LinearLayout -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#E91E63"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#651FFF"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <!-- con width="0dp" hago que el weight ordene
+        diviendo el total en las partes quele diga
+        en estecaso 1+2+1 divide la pantalla en 4 -->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="#C6FF00"
+            android:layout_weight="1"
+            />
+
+        <!-- al colocar vertical cambio la forma de alinar
+         considero dividir en 4 horizontal y de las 2 se divide
+         en 3 vertical-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="#D500F9"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            >
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="#E57373"
+                />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:background="#D500F9"
+                android:contentDescription="imagen"
+                android:src="@drawable/Gizmo_Mogwai"
+                android:scaleType="centerCrop"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="#1DE9B6"
+            android:layout_weight="1"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>
